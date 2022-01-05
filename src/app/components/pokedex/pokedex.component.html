@@ -1,0 +1,9 @@
+<button (click)="connect()">Api connection</button>
+
+<p>pokedex works!</p>
+
+<ul *ngIf="pokedex">
+    <li *ngFor="let poke of pokedex.results">
+        <p>{{poke.name}}</p>
+    </li>
+</ul>

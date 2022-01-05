@@ -1,0 +1,28 @@
+<p>directive works!</p>
+
+<p (click)="toggle()" style="cursor: pointer;">
+    Click ici
+</p>
+
+<div *ngIf="isVisible">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis optio necessitatibus neque enim laborum est id atque, provident corporis quaerat cumque iure veritatis nulla ducimus dolorem tenetur aut exercitationem sequi?
+</div>
+
+<div *ngIf="myUser">
+    <p>{{myUser.login}}</p>
+</div>
+
+<hr />
+<ul>
+    <li *ngFor="let s of liste; let i = index; let pair = even">
+       <p [ngClass]="{maClasse : s.length > 5}"> {{i}} - {{s}}</p>
+    </li>
+</ul>
+
+<hr />
+<input [(ngModel)]="myProp">
+<div [ngSwitch]="myProp">
+    <div *ngSwitchCase="1">c#</div>
+    <div *ngSwitchCase="2">Typescript</div>
+    <div *ngSwitchDefault>entrez 1 ou 2</div>
+</div>

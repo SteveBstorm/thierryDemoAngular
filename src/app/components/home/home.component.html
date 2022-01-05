@@ -1,0 +1,24 @@
+<p>home works!</p>
+<p>{{myProp}}</p> <!-- Binding One-way -->
+
+<input type="text" [hidden]="isVisible" [(ngModel)]="myProp">
+
+<p>{{myUser?.login}}</p>
+
+<input type="text" [(ngModel)]="myUser.login">
+
+<button [disabled]="myProp == 'truc'" (click)="onClick()">Click ici</button>
+
+<button (click)="toggle()">Visibilité</button>
+
+<hr />
+<p>Etat de connexion : {{isConnected}}</p>
+
+
+
+<ng-container *ngIf="!isConnected; else elseTemplate">
+    <button (click)="connect()">Connect</button>
+</ng-container>
+<ng-template #elseTemplate>
+    <button (click)="disconnect()" >Disconnect</button>
+</ng-template>

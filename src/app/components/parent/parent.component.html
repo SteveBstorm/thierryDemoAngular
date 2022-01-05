@@ -1,0 +1,8 @@
+<p>parent works!</p>
+<div style="border : 1px black solid">
+<app-enfant [monAttribut]="currentUser"
+    (monEvent)="maMethodeReponse($event)"
+></app-enfant>
+</div>
+<hr>
+<button (click)="onClick()">envoi</button>
